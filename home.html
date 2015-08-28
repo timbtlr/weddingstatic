@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html ng-app="MainApplication">
+
+<head lang="en">
+    <meta charset="utf-8">
+
+    <title>New Beginnings - Tym and Erin Wedding</title>
+
+    <base href="/" />
+
+    <!--  Javascript imports -->
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+    <script src="libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+    <!--  Angular Application Setup -->
+    <script src="js/app.js"></script>
+    <script src="js/appRoutes.js"></script>
+    <script src="js/controllers/photo.control.js"></script>
+    <script src="js/services/photo.service.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/clean-blog.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <link href='css/custom.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class = "custom-navlink" href="/">Home</a></li>
+                    <li><a class = "nav-rsvp custom-navlink" href="/rsvp">RSVP</a></li>
+                    <li><a class = "custom-navlink" href="/about">About the Wedding</a></li>
+                    <li><a class = "custom-navlink" href="/photos">Photos</a></li>
+                    <li><a class = "custom-navlink" href="/registry">Registry</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <header class="intro-header" style="background-image: url('img/banner-bg-small.jpeg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Eat - Drink - Party</h1>
+                        <hr class="medium">
+                        <span style="font-weight: bold;" class="subheading">A Wedding Celebration for</span>
+                        <h2>Tym &amp; Erin</h2>
+                        <span style="font-weight: bold;" class="subheading">on</span>
+                        <h2>August 20, 2016</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Angular dynamic content is loaded beyond this point -->
+    <div ng-view></div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <hr class="large">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    This single page application has been made open-source at
+                    github.
+                    <a href="http://www.github.com/ketsun/weddingsite">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
+

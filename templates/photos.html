@@ -1,0 +1,23 @@
+<div class="container" ng-controller = "PhotoController">
+    <div class="row">
+          <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="albumImage">
+                            <img ng-src="{{current_image.full_url}}" alt="{{current_image.caption}}"/>
+                        </div>
+                        <h3>{{current_image.caption}}</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="wrapper">
+                            <ul class="list">
+                                <li ng-repeat="photo in photo_list" ng-click="setCurrentImage(photo)">
+                                    <img ng-src="{{photo.full_url}}" alt="{{photo.caption}}"/>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+          </div>
+    </div>
+</div>

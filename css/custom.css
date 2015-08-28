@@ -1,0 +1,46 @@
+.custom-navlink {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-rsvp {
+    background-color: #800000;
+    border-radius: 25px;
+}
+
+.albumImage img {
+    margin-bottom: .4rem;
+    max-width:100%;
+    max-height:75%;
+}
+
+label, select {
+    float: right;
+    margin-left: 1rem;
+}
+
+.wrapper .list {
+    list-style: none;
+    height: 480px;
+    margin-left: 5.6rem;
+    overflow-x: auto;
+}
+
+.wrapper .list li img {
+    width: 140px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    display: block;
+    border: 2px solid #fff;
+}
+
+.wrapper .list li img:hover {
+    box-shadow: 0px 1px 4px #444;
+    transition: all .2s ease-in-out;
+    border-color: #fff;
+}
+
+.wrapper .list li img:active {
+    opacity: .74;
+    box-shadow: 0px 1px 8px #666;
+}

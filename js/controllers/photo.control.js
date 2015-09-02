@@ -13,6 +13,7 @@ angular
     .module('PhotoCtrl', [])
     .controller('PhotoController', function($scope, photoServiceFactory) {
         $scope.photo_list = [];
+        $scope.popupWindow = PopupHandler();
 
         $scope.queryForPhotos = function() {
             photoServiceFactory.get().then(function(result) {
@@ -29,4 +30,24 @@ angular
 
         // initial image index
         $scope.current_image = $scope.photo_list[0];
+
 });
+
+
+function PopupHandler () {
+    this.show = false;
+
+    this.openPopup = function () {
+        this.windowShow = true;
+    };
+
+    this.closePopup = function () {
+        this.windowShow = false;
+        this.backgroundStyle = {};
+    };
+
+    this.setResponse = function (message, color ) {
+        this.responseStyle = {"color" : color};
+        this.response = message;
+    }
+}

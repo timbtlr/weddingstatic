@@ -16,6 +16,7 @@ angular
         'ui.bootstrap',
         'ngRoute',
         'appRoutes',
+        'HomeCtrl',
         'PhotoCtrl',
         'PhotoService'
     ]);

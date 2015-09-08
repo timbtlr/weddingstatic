@@ -47,8 +47,10 @@ hr.small {
   border-color: white;
 }
 .navbar-custom {
+  padding-top: 5px;
   z-index: 3;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 50px;
 }
 .navbar-custom .navbar-brand {
   font-weight: 800;
@@ -98,7 +100,7 @@ hr.small {
   .navbar-custom.is-fixed {
     /* when the user scrolls down, we keep the navbar at the top of the viewport*/
     position: fixed;
-    background-color: #c5c4bf;
+    background-color: white;
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;

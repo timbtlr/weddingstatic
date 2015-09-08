@@ -1,46 +1,47 @@
+.home-link {
+    text-decoration: none !important;
+}
+
+.home-descriptor {
+    height: 300px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.home-descriptor:hover {
+    background-color: #eee;
+}
+
+.home-descriptor h3 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+    color: white;
+    background-color: rgba(153,51,51, 0.6);
+    font-size: 21px;
+}
+
+.home-descriptor h3,p {
+    padding-top: 20px;
+    margin: auto;
+    text-align: center;
+}
+
 .custom-navlink {
     font-weight: bold;
-    font-size: 14px;
 }
 
 .nav-rsvp {
-    background-color: #800000;
-    border-radius: 25px;
+    border-radius: 5px;
+    color: white !important;
+    border: 1px solid #600;
+    font-size: 18px;
+    background-color: rgba(153,51,51, 0.8);
 }
 
-.albumImage img {
-    margin-bottom: .4rem;
-    max-width:100%;
-    max-height:75%;
+.nav-rsvp:hover {
+    color: black !important;
 }
 
-label, select {
-    float: right;
-    margin-left: 1rem;
-}
-
-.wrapper .list {
-    list-style: none;
-    height: 480px;
-    margin-left: 5.6rem;
-    overflow-x: auto;
-}
-
-.wrapper .list li img {
-    width: 140px;
-    margin-bottom: 1rem;
-    cursor: pointer;
-    display: block;
-    border: 2px solid #fff;
-}
-
-.wrapper .list li img:hover {
-    box-shadow: 0px 1px 4px #444;
-    transition: all .2s ease-in-out;
-    border-color: #fff;
-}
-
-.wrapper .list li img:active {
-    opacity: .74;
-    box-shadow: 0px 1px 8px #666;
+.nav-rsvp .nav li a {
+    font-size: 18px !important;
 }

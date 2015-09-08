@@ -47,12 +47,11 @@ hr.small {
   border-color: white;
 }
 .navbar-custom {
-  position: absolute;
   top: 0;
-  left: -350px;
   width: 100%;
   z-index: 3;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  left: 300px;
 }
 .navbar-custom .navbar-brand {
   font-weight: 800;
@@ -74,15 +73,15 @@ hr.small {
   }
   .navbar-custom .navbar-brand:hover,
   .navbar-custom .navbar-brand:focus {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(153, 51, 51, 0.8);
   }
   .navbar-custom .nav li a {
-    color: white;
+    color: black;
     padding: 10px;
   }
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(153, 51, 51, 0.8);
   }
 }
 @media only screen and (min-width: 1170px) {
@@ -102,8 +101,8 @@ hr.small {
   .navbar-custom.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
-    top: -61px;
-    background-color: rgba(255, 255, 255, 0.9);
+    top: 0x;
+    background-color: rgba(255, 255, 255, 1);
     border-bottom: 1px solid #f2f2f2;
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
@@ -114,22 +113,16 @@ hr.small {
   }
   .navbar-custom.is-fixed .navbar-brand:hover,
   .navbar-custom.is-fixed .navbar-brand:focus {
-    color: #0085a1;
+    color: #600;
   }
   .navbar-custom.is-fixed .nav li a {
     color: #404040;
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
-    color: #0085a1;
+    color: #600;
   }
   .navbar-custom.is-visible {
-    /* if the user changes the scrolling direction, we show the header */
-    -webkit-transform: translate3d(0, 100%, 0);
-    -moz-transform: translate3d(0, 100%, 0);
-    -ms-transform: translate3d(0, 100%, 0);
-    -o-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
   }
 }
 .intro-header {
@@ -141,6 +134,7 @@ hr.small {
   background-size: length;
   -o-background-size: length;
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 .intro-header .site-heading,
 .intro-header .post-heading,

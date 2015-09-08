@@ -32,6 +32,7 @@
     <link href="css/custom.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -47,72 +48,72 @@
 </head>
 
 <body>
-    <div class="row">
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-            <div class="container-fluid">
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li><a class = "custom-navlink" href="/">Home</a></li>
-                        <li><a class = "custom-navlink nav-rsvp" href="/rsvp">RSVP</a></li>
-                        <li><a class = "custom-navlink" href="/about">About the Wedding</a></li>
-                        <li><a class = "custom-navlink" href="/photos">Photos</a></li>
-                        <li><a class = "custom-navlink" href="/registry">Registry</a></li>
-                    </ul>
+    <div class = "content">
+        <div class="row">
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+                <div class="container">
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li><a class = "custom-navlink" href="/">Home</a></li>
+                            <li><a class = "custom-navlink nav-rsvp" href="/rsvp">RSVP</a></li>
+                            <li><a class = "custom-navlink" href="/about">About the Wedding</a></li>
+                            <li><a class = "custom-navlink" href="/photos">Photos</a></li>
+                            <li><a class = "custom-navlink" href="/registry">Registry</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
                 </div>
-                <!-- /.navbar-collapse -->
+                <!-- /.container -->
+            </nav>
+        </div>
+
+        <!-- Page Header -->
+        <header class="intro-header" style="background-image: url('img/banner-bg-small.jpeg')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="site-heading">
+                            <h1>Eat - Drink - Party</h1>
+                            <hr class="medium">
+                            <span style="font-weight: bold;" class="subheading">A Wedding Celebration for</span>
+                            <h2>Tym &amp; Erin</h2>
+                            <span style="font-weight: bold;" class="subheading">on</span>
+                            <h2>August 20, 2016</h2>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- /.container -->
-        </nav>
+        </header>
+
+        <!-- Angular dynamic content is loaded beyond this point -->
+        <div ng-view></div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <hr class="large">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-3">
+                        <div class="row">
+                            <a href="http://www.github.com/ketsun/weddingapi">API portion of this application</a>
+                        </div>
+                        <div class="row">
+                            <a href="http://www.github.com/ketsun/weddingstatic">Static portion of application</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-
-    <!-- Page Header -->
-    <header class="intro-header" style="background-image: url('img/banner-bg-small.jpeg')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        <h1>Eat - Drink - Party</h1>
-                        <hr class="medium">
-                        <span style="font-weight: bold;" class="subheading">A Wedding Celebration for</span>
-                        <h2>Tym &amp; Erin</h2>
-                        <span style="font-weight: bold;" class="subheading">on</span>
-                        <h2>August 20, 2016</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Angular dynamic content is loaded beyond this point -->
-    <div ng-view></div>
-
-    <hr>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <hr class="large">
-                <div class="col-lg-4"></div>
-                <div class="col-lg-3">
-                    <div class="row">
-                        <a href="http://www.github.com/ketsun/weddingapi">API portion of this application</a>
-                    </div>
-                    <div class="row">
-                        <a href="http://www.github.com/ketsun/weddingstatic">Static portion of application</a>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

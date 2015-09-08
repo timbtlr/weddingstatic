@@ -47,11 +47,8 @@ hr.small {
   border-color: white;
 }
 .navbar-custom {
-  top: 0;
-  width: 100%;
   z-index: 3;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  left: 300px;
 }
 .navbar-custom .navbar-brand {
   font-weight: 800;
@@ -99,30 +96,21 @@ hr.small {
     backface-visibility: hidden;
   }
   .navbar-custom.is-fixed {
-    /* when the user scrolls down, we hide the header right above the viewport */
+    /* when the user scrolls down, we keep the navbar at the top of the viewport*/
     position: fixed;
-    top: 0x;
-    background-color: rgba(255, 255, 255, 1);
-    border-bottom: 1px solid #f2f2f2;
+    background-color: #c5c4bf;
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
-  }
-  .navbar-custom.is-fixed .navbar-brand {
-    color: #404040;
+    width: 100%;
   }
   .navbar-custom.is-fixed .navbar-brand:hover,
   .navbar-custom.is-fixed .navbar-brand:focus {
     color: #600;
   }
-  .navbar-custom.is-fixed .nav li a {
-    color: #404040;
-  }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
     color: #600;
-  }
-  .navbar-custom.is-visible {
   }
 }
 .intro-header {

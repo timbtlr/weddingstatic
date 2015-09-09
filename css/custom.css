@@ -21,6 +21,8 @@ h1 {
   font-weight: 800;
 }
 
+
+
 .home-link {
     text-decoration: none !important;
 }
@@ -30,6 +32,8 @@ h1 {
     max-width: 100px;
     display: block;
     margin: auto;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .home-descriptor {
@@ -54,9 +58,18 @@ h1 {
 }
 
 .albumImage img {
+    display: block;
+    margin: auto;
     margin-bottom: .4rem;
-    max-width:100%;
-    max-height:75%;
+    max-width:800px;
+    max-height:600px;
+}
+
+.albumImage .photo-caption {
+    display: block;
+    margin: auto;
+    padding-bottom: 5px;
+    font-size: 30px;
 }
 
 label, select {

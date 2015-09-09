@@ -56,9 +56,8 @@ h1 {
 .nav-rsvp {
     border-radius: 5px;
     color: white !important;
-    border: 1px solid #600;
     font-size: 18px;
-    background-color: rgba(153,51,51, 0.8);
+    background-color: #be1e2d;
 }
 
 .nav-rsvp:hover {

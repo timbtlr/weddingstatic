@@ -72,7 +72,7 @@ hr.small {
   }
   .navbar-custom .navbar-brand:hover,
   .navbar-custom .navbar-brand:focus {
-    color: rgba(153, 51, 51, 0.8);
+    color: #0085a1;
   }
   .navbar-custom .nav li a {
     color: black;
@@ -80,7 +80,7 @@ hr.small {
   }
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
-    color: rgba(153, 51, 51, 0.8);
+    color: #0085a1;
   }
 }
 @media only screen and (min-width: 1170px) {
@@ -112,7 +112,7 @@ hr.small {
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
-    color: #600;
+    color: #0085a1;
   }
 }
 .intro-header {
@@ -154,7 +154,7 @@ hr.small {
   line-height: 1.1;
   display: block;
   font-family: "Open Sans", 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   margin: 10px 0 0;
 }
 @media only screen and (min-width: 768px) {

@@ -1,15 +1,3 @@
-body::after {
-  content: "";
-  background: url("../img/background.jpg");
-  opacity: 0.4;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-}
-
 .content {
     margin: auto;
     width: 1275px;
@@ -21,6 +9,10 @@ h1 {
   font-weight: 800;
 }
 
+.emphasized-subheading {
+    padding-top: 5px;
+    font-size: 40px;
+}
 
 
 .home-link {
@@ -55,6 +47,15 @@ h1 {
 
 .custom-navlink {
     font-weight: bold;
+}
+
+.github-links {
+    font-size: 10px;
+}
+
+.fa {
+    max-height: 50px;
+    max-width: 50px;
 }
 
 .albumImage img {
@@ -111,7 +112,8 @@ label, select {
 }
 
 .nav-rsvp:hover {
-    color: black !important;
+    color: #1edec1 !important;
+    background-color: #be1e2d !important;
 }
 
 .nav-rsvp .nav li a {

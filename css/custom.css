@@ -106,7 +106,7 @@ h1 {
     display: block;
     margin: auto;
     max-width: 95%;
-    max-height: 91%;
+    max-height: 88%;
 }
 
 .next-photo-arrow,
@@ -132,13 +132,17 @@ h1 {
     max-width: 100%;
     display: block;
     margin: auto;
-    bottom: 10px;
+    bottom: 0px;
+}
+
+.image-caption {
+    height: 15px;
+    font-size: 14px;
 }
 
 .image-caption,
 .close-image {
-    padding: 5px;
-    height: 50px;
+    height: 20px;
     text-align: center;
     display: block;
     margin: auto;
@@ -147,6 +151,7 @@ h1 {
 .close-image {
     font-size: 12px;
     font-weight: bold;
+    margin-top: 25px;
     cursor: pointer;
     width: 100px;
 }

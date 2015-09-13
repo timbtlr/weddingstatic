@@ -133,6 +133,7 @@ h1 {
     display: block;
     margin: auto;
     bottom: 0px;
+    cursor: pointer;
 }
 
 .image-caption {

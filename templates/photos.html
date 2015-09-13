@@ -1,11 +1,32 @@
 <div class="container" ng-controller = "PhotoController">
+    <div class="popup-container" ng-show="popup_window.show">
+        <div class="photo-display">
+            <div class="previous-photo-arrow" ng-click="getPreviousPhoto()">
+                <span class="hidden-arrow">
+                    <img src="../img/arrow-bold-left.jpg" />
+                </span>
+            </div>
+            <div class="next-photo-arrow" ng-click="getNextPhoto()">
+                <div class="hidden-arrow">
+                    <img src="../img/arrow-bold-right.jpg" />
+                </div>
+            </div>
+            <img ng-src="{{current_photo.full_url}}" />
+            <div class="row">
+                <span class="image-caption">{{current_photo.caption}}</p>
+            </div>
+            <div class="row">
+                <span class="close-image" ng-click="closePhoto()">Close</span>
+            </div>
+        </div>
+    </div>
+
     <div class="row">
           <div class="col-xs-12">
             <div ng-repeat="photo in photo_list">
-                <div ng-class="row|($index % 3 == 0)">
-                    <div class="col-sm-4 thumbnail-container">
-                        <img class="photo-thumbnail" ng-src="{{photo.full_url}}" alt="{{photo.caption}}"/>
-                    </div>
+                <!-- This should only work because the content container width from the parent is rigid.  Find a better way.  -->
+                <div class="col-sm-4 thumbnail-container">
+                    <img class="photo-thumbnail" ng-src="{{photo.full_url}}" alt="{{photo.caption}}" ng-click= "setCurrentPhoto(photo)"/>
                 </div>
             </div>
         </div>

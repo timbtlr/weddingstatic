@@ -105,8 +105,8 @@ h1 {
 .photo-display img {
     display: block;
     margin: auto;
-    max-width: 95%;
-    max-height: 88%;
+    max-width: 92%;
+    max-height: 95%;
 }
 
 .next-photo-arrow,
@@ -141,20 +141,21 @@ h1 {
     font-size: 14px;
 }
 
+.close-image {
+    height: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 5px;
+    cursor: pointer;
+    width: 100px;
+}
+
 .image-caption,
 .close-image {
-    height: 20px;
     text-align: center;
     display: block;
     margin: auto;
-}
-
-.close-image {
-    font-size: 12px;
-    font-weight: bold;
-    margin-top: 25px;
-    cursor: pointer;
-    width: 100px;
+    bottom: 0px;
 }
 
 .close-image:hover {

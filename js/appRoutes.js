@@ -30,8 +30,8 @@ angular
 
         //  Query view
         .when('/rsvp/', {
-            templateUrl: 'templates/rsvp.html',
-            controller: 'RsvpController'
+            templateUrl: 'templates/rsvp.html'
+            //controller: 'RsvpController'
         })
 
         //  Query view

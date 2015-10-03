@@ -33,6 +33,24 @@ h1 {
     cursor: hand;
 }
 
+.about-content {
+    height: 250px;
+}
+
+.about-content .descriptor-title {
+    display: block;
+    margin: auto;
+    padding-bottom: 5px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.about-content p,li {
+    padding-top: 10px;
+    font-size: 14px;
+    text-align: left;
+}
+
 .home-descriptor {
     height: 300px;
 }

@@ -48,6 +48,10 @@ h1 {
     text-align: left;
 }
 
+.about-content-story li a {
+    text-decoration: none !important;
+}
+
 .about-content .descriptor-title,
 .about-content-story .descriptor-title {
     display: block;

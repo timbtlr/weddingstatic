@@ -1,4 +1,62 @@
-<div class = "container">
-    <p class="page-header">So, you want to join the party?</p>
-    <p>We haven't mailed out invitations...yet!  Please check back here once you receive an invitation with an RSVP code.</p>
+
+<div class = "container" ng-controller = "RsvpController">
+    <form novalidate class="rsvp-form" ng-show="!user_logged_in">
+        <p>Enter the <strong>Invitation Name</strong> and <strong>Invitation Number</strong> as written on your RSVP card.</p>
+        <p class = "error-response">{{error_response}}</p>
+        <p class = "success-response">{{success_response}}</p>
+        <br/>
+        <div class="row">
+            <div class="col-xs-10">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-3">Invitation Name</div>
+                <div class="col-xs-3"><input type="text" ng-model="invite_name" /></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-10">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-3">Invitation Number</div>
+                <div class="col-xs-3"><input type="text" ng-model="invite_number" /></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-10">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-3">
+                    <input type="submit" ng-click="login(invite_name, invite_number)" value="Find your Invitiation" />
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form novalidate class="rsvp-form" ng-show="user_logged_in">
+        <p>Check the <strong>Attending</strong> box for each guest planning to attend the wedding.  Click <strong>RSVP</strong> when you're done!</p>
+        <p class = "error-response">{{error_response}}</p>
+        <p class = "success-response">{{success_response}}</p>
+        <br/>
+        <div class="row" ng-repeat="invitee in invitees">
+            <div class="col-xs-10">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-3">{{invitee.name}}</div>
+                <div class="col-xs-2">Attending:</div>
+                <div class="col-xs-1"><input type="checkbox" ng-model="invitee.attending" data-ng-value="true"/></div>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-xs-10">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-6">
+                    <textarea style="width:415px;" ng-model="invitation.message" placeholder="Leave us a message! (optional)"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-10">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-6"><input type="submit" ng-click="update_invitation()" value="RSVP" /></div>
+            </div>
+        </div>
+    </form>
 </div>

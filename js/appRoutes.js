@@ -40,11 +40,6 @@ angular
             controller: 'RegistryController'
         })
 
-        //  admin view
-        .when('/admin', {
-            templateUrl: 'templates/admin.html'
-        })
-
         //  Redirect incorrect navigation to the default (Home) view
         .otherwise({ redirectTo: '/' });
 

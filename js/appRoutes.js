@@ -22,30 +22,25 @@ angular
             templateUrl: '/templates/about.html'
         })
 
-        //  Query view
-        .when('/photos/', {
+        //  photo view
+        .when('/photos', {
             templateUrl: '/templates/photos.html',
             controller: 'PhotoController'
         })
 
-        //  Query view
+        //  rsvp view
         .when('/rsvp/', {
             templateUrl: 'templates/rsvp.html'
             //controller: 'RsvpController'
         })
 
-        //  Query view
+        //  registry view
         .when('/registry', {
             templateUrl: 'templates/registry.html',
             controller: 'RegistryController'
         })
 
-        //  Query view
-        .when('/contact', {
-            templateUrl: 'templates/contact.html'
-        })
-
-        //  Query view
+        //  admin view
         .when('/admin', {
             templateUrl: 'templates/admin.html'
         })
@@ -53,5 +48,5 @@ angular
         //  Redirect incorrect navigation to the default (Home) view
         .otherwise({ redirectTo: '/' });
 
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(false).hashPrefix('!');;
 }]);

@@ -112,6 +112,11 @@ h1 {
     width: 225px;
     height: 150px;
     overflow: hidden;
+    cursor: pointer;
+}
+
+.thumbnail-container:hover {
+    opacity: 0.7;
 }
 
 .photo-thumbnail {
@@ -130,7 +135,7 @@ h1 {
 }
 
 .photo-display {
-    width: 60%;
+    width: 50%;
     height: 80%;
     position: relative;
     margin: auto;
@@ -139,6 +144,9 @@ h1 {
     background-color: white;
     border-radius: 10px;
     border: 2px solid darkgrey;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
 }
 
 .photo-display img {
@@ -146,15 +154,19 @@ h1 {
     margin: auto;
     max-width: 92%;
     max-height: 95%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .next-photo-arrow,
 .previous-photo-arrow {
     position: absolute;
-    top: 10px;
-    height: 90%;
+    height: 50px;
     width: 20px;
     z-index: 40003;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .next-photo-arrow {
@@ -181,22 +193,16 @@ h1 {
 }
 
 .close-image {
-    height: 10px;
-    font-size: 12px;
-    font-weight: bold;
-    padding-top: 5px;
+    position: absolute;
+    right: 15px;
+    height: 15px;
+    width: 15px;
     cursor: pointer;
-    width: 100px;
 }
 
-.image-caption,
-.close-image {
+.image-caption{
     text-align: center;
     display: block;
     margin: auto;
     bottom: 0px;
-}
-
-.close-image:hover {
-    color: #de1e2c;
 }

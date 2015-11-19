@@ -66,7 +66,7 @@ function PopupHandler () {
     this.background_style = {};
 
     this.openPopup = function () {
-        this.backgroundStyle = {'opacity': '0.4', 'filter': 'alpha(opacity=40)'};
+        this.backgroundStyle = {'opacity': '0.2', 'filter': 'alpha(opacity=20)'};
         this.show = true;
     };
 

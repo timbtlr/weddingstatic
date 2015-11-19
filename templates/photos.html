@@ -1,6 +1,11 @@
 <div class="container" ng-controller = "PhotoController">
     <div class="popup-container" ng-show="popup_window.show">
-        <div class="photo-display">
+        <div id="openModal" class="photo-display">
+            <div class="row">
+                <div class="close-image">
+                    <img src="../img/x-icon.png" ng-click="closePhoto()"/>
+                </div>
+            </div>
             <div class="previous-photo-arrow" ng-click="getPreviousPhoto()">
                 <img src="../img/arrow-bold-left.jpg" />
             </div>
@@ -8,12 +13,6 @@
                 <img src="../img/arrow-bold-right.jpg" />
             </div>
             <img ng-src="{{current_photo.full_url}}" />
-            <div class="row">
-                <span class="image-caption">{{current_photo.caption}}</p>
-            </div>
-            <div class="row">
-                <span class="close-image" ng-click="closePhoto()">Close</span>
-            </div>
         </div>
     </div>
 

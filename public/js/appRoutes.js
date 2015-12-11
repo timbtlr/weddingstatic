@@ -14,17 +14,17 @@ angular
     $routeProvider
         //  Home view
         .when('/', {
-            templateUrl: '/templates/home.html'
+            templateUrl: 'templates/home.html'
         })
 
         //  Query view
         .when('/about/', {
-            templateUrl: '/templates/about.html'
+            templateUrl: 'templates/about.html'
         })
 
         //  photo view
         .when('/photos', {
-            templateUrl: '/templates/photos.html',
+            templateUrl: 'templates/photos.html',
             controller: 'PhotoController'
         })
 

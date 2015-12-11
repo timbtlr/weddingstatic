@@ -18,6 +18,5 @@ angular
         'appRoutes',
         'HomeCtrl',
         'PhotoCtrl',
-        'PhotoService',
-        'envConfig'
+        'PhotoService'
     ]);

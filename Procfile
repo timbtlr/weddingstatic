@@ -1,1 +1,0 @@
-web: npm install; grunt build; vendor/bin/heroku-php-apache2

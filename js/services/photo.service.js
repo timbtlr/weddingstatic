@@ -1,17 +1,9 @@
 angular
     .module('PhotoService', [])
-    .factory('photoServiceFactory', ['$http', 'ENV', function($http, ENV) {
-        var get_photos = {
-            method: 'GET',
-            url: ENV.weddingApiUrl.concat('/photos/'),
-            headers: {
-                'Authorization': ENV.weddingApiKey
-            }
-        }
-
+    .factory('photoServiceFactory', ['$http', function($http) {
         return {
             get : function() {
-                return $http(get_photos);
+                return $http.get('https://agile-hamlet-2538.herokuapp.com/photos/');
             }
         }
     }])

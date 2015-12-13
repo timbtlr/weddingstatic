@@ -200,9 +200,42 @@ h1 {
     cursor: pointer;
 }
 
-.image-caption{
+.image-caption {
     text-align: center;
     display: block;
     margin: auto;
     bottom: 0px;
 }
+
+.registry-image {
+    height: 75px;
+    width: 75px;
+}
+
+.registry-item {
+    height: 150px;
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+}
+
+.registry-content p,li {
+    padding: 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+.registry-block {
+    border: solid 1px #737373;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.registry-block:hover {
+    background-color: #f2f2f2;
+}
+
+.registry-content .registry-store {
+    font-size: 25px;
+}
+

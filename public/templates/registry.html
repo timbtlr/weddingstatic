@@ -1,4 +1,17 @@
-<div class = "container">
-    <p class="page-header">Sorry, we went to the store...</p>
-    <p>We're still picking out our registry items!  Check back soon to see what we chose.</p>
+<div class = "container" ng-controller = "RegistryController">
+    <p>We registered at the following stores!  Click the links below to see what we chose.</p>
+    <br/>
+    <div class="row" ng-repeat="item in registry_list">
+        <div class="registry-item">
+            <a href="{{item.registry_url}}" class="col-xs-12 registry-block">
+                <div class="col-xs-2">
+                    <img class="registry-image" ng-src="{{item.thumbnail_url}}" />
+                </div>
+                <div class="col-xs-10 registry-content">
+                    <p class="registry-store"><strong>{{item.store_name}}</strong></p>
+                    <p class="descriptor-content">{{item.description}}</p>
+                </div>
+            </a>
+        </div>
+    </div>
 </div>

@@ -11,25 +11,21 @@ Author:
 
 angular
     .module('PhotoCtrl', [])
-    .controller('PhotoController', function($scope, photoServiceFactory) {
-        $scope.photo_list = [];
-
+    .controller('PhotoController', function($scope, Photo) {
         $scope.popup_window = new PopupHandler();
         $scope.current_photo = null;
         $scope.max_index = 0;
 
-        $scope.queryForPhotos = function() {
-            photoServiceFactory.get().then(function(result) {
-                $scope.photo_list = result.data.data;
+        Photo.query().$promise.then(function(result) {
+            $scope.photo_list = result.data;
 
-                //  Add an index value to each photo
-                for (var i = 0; i < $scope.photo_list.length; i++) {
-                    $scope.photo_list[i].index = i;
-                }
+            //  Add an index value to each photo
+            for (var i = 0; i < $scope.photo_list.length; i++) {
+                $scope.photo_list[i].index = i;
+            }
 
-                $scope.max_index = $scope.photo_list.length - 1;
-            })
-        }
+            $scope.max_index = $scope.photo_list.length - 1;
+        });
 
         $scope.setCurrentPhoto = function(photo) {
             $scope.current_photo = photo;
@@ -55,9 +51,6 @@ angular
                 $scope.current_photo = $scope.photo_list[$scope.current_photo.index - 1]
             }
         };
-
-        //  Query for all photos
-        $scope.queryForPhotos();
 });
 
 

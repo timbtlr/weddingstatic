@@ -11,12 +11,5 @@ Author:
 
 angular
     .module('HomeCtrl', [])
-    .controller('HomeController', function($scope, photoServiceFactory) {
-        //  Heroku has a tendency to idle when not in use.
-        //  This simple query to the API attempts to ensure that by the time
-        //  a user attempts a "useful" query that the app will no longer be idle.
-        $scope.queryForPhotos = function() {
-            photoServiceFactory.get().then(function(result) {
-            })
-        }
+    .controller('HomeController', function($scope) {
 });

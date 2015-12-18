@@ -1,17 +1,14 @@
 angular
     .module('RegistryService', [])
-    .factory('registryServiceFactory', ['$http', 'ENV', function($http, ENV) {
-        var get_registry_items = {
-            method: 'GET',
-            url: ENV.weddingApiUrl.concat('/registry-items/'),
-            headers: {
-                'Authorization': ENV.weddingApiKey
+    .factory('Registry', function($resource, ENV) {
+        return $resource(
+            ENV.weddingApiUrl.concat('/registry-items/:id'),
+            {},
+            {
+                'query': {
+                    method: 'GET',
+                    isArray: false
+                }
             }
-        }
-
-        return {
-            get : function() {
-                return $http(get_registry_items);
-            }
-        }
-    }])
+        );
+    });

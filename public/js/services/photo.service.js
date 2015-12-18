@@ -1,17 +1,14 @@
 angular
     .module('PhotoService', [])
-    .factory('photoServiceFactory', ['$http', 'ENV', function($http, ENV) {
-        var get_photos = {
-            method: 'GET',
-            url: ENV.weddingApiUrl.concat('/photos/'),
-            headers: {
-                'Authorization': ENV.weddingApiKey
+    .factory('Photo', function($resource, ENV) {
+        return $resource(
+            ENV.weddingApiUrl.concat('/photos/:id'),
+            {},
+            {
+                'query': {
+                    method: 'GET',
+                    isArray: false
+                }
             }
-        }
-
-        return {
-            get : function() {
-                return $http(get_photos);
-            }
-        }
-    }])
+        );
+    });

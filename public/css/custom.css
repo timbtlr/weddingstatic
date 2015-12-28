@@ -239,3 +239,14 @@ h1 {
     font-size: 25px;
 }
 
+.error-response {
+    font-size: 16px;
+    color: red;
+    height: 25px;
+}
+
+.success-response {
+    font-size: 16px;
+    color: green;
+    height: 25px;
+}

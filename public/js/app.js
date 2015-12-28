@@ -9,7 +9,9 @@ angular
         'HomeCtrl',
         'PhotoCtrl',
         'RegistryCtrl',
+        'RsvpCtrl',
         'PhotoService',
         'RegistryService',
+        'RSVPService',
         'envConfig'
     ]);

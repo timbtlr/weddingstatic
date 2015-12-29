@@ -2,7 +2,7 @@ angular
     .module('RSVPService', [])
     .factory('Invitation', function($resource, ENV) {
         return $resource(
-            ENV.weddingApiUrl.concat('/invitations/:id'),
+            ENV.weddingApiUrl.concat('/invitations/:id/'),
             {},
             {
                 'query': {
@@ -25,7 +25,7 @@ angular
     })
     .factory('Invitee', function($resource, ENV) {
         return $resource(
-            ENV.weddingApiUrl.concat('/invitees/:id'),
+            ENV.weddingApiUrl.concat('/invitees/:id/'),
             {},
             {
                 'query': {

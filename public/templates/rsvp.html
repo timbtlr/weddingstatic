@@ -1,9 +1,7 @@
 
 <div class = "container" ng-controller = "RsvpController">
     <form novalidate class="rsvp-form" ng-show="!user_logged_in">
-        <p>Enter the <strong>Invitation Name</strong> and <strong>Invitation Number</strong> as written on your RSVP card.</p>
-        <p class = "error-response">{{error_response}}</p>
-        <p class = "success-response">{{success_response}}</p>
+        <p class="instructions">Enter the <strong>Invitation Name</strong> and <strong>Invitation Number</strong> as written on your RSVP card.</p>
         <br/>
         <div class="row">
             <div class="col-xs-10">
@@ -19,7 +17,8 @@
                 <div class="col-xs-3"><input type="text" ng-model="invite_number" /></div>
             </div>
         </div>
-
+        <p class = "error-response">{{error_response}}</p>
+        <p class = "success-response">{{success_response}}</p>
         <div class="row">
             <div class="col-xs-10">
                 <div class="col-xs-4"></div>
@@ -31,9 +30,7 @@
     </form>
 
     <form novalidate class="rsvp-form" ng-show="user_logged_in">
-        <p>Check the <strong>Attending</strong> box for each guest planning to attend the wedding.  Click <strong>RSVP</strong> when you're done!</p>
-        <p class = "error-response">{{error_response}}</p>
-        <p class = "success-response">{{success_response}}</p>
+        <p class="instructions">Check the <strong>Attending</strong> box for each guest planning to attend the wedding.  Click <strong>RSVP</strong> when you're done!</p>
         <br/>
         <div class="row" ng-repeat="invitee in invitees">
             <div class="col-xs-10">
@@ -52,6 +49,8 @@
                 </div>
             </div>
         </div>
+        <p class = "error-response">{{error_response}}</p>
+        <p class = "success-response">{{success_response}}</p>
         <div class="row">
             <div class="col-xs-10">
                 <div class="col-xs-4"></div>

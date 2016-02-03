@@ -250,3 +250,7 @@ h1 {
     color: green;
     height: 25px;
 }
+
+.instructions {
+    margin-top: 25px;
+}

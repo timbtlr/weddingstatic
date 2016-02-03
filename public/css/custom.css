@@ -240,12 +240,14 @@ h1 {
 }
 
 .error-response {
+    padding-right:30px;
     font-size: 16px;
     color: red;
     height: 25px;
 }
 
 .success-response {
+    padding-right:30px;
     font-size: 16px;
     color: green;
     height: 25px;

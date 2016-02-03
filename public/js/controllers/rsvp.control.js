@@ -23,6 +23,7 @@ angular
     $scope.error_response = ""
     $scope.success_response = ""
     $scope.user_logged_in = false;
+    $scope.rsvp_submitted = false;
     $scope.invitees = [];
 
     $scope.login = function(invite_name, invite_number) {
@@ -63,6 +64,7 @@ angular
             Invitee.update({id: $scope.invitees[i].id}, $scope.invitees[i]);
         };
 
+        $scope.rsvp_submitted = true;
         $scope.success_response = "Get ready to party, your RSVP has been updated!"
     };
 });

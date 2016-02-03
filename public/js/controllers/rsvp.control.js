@@ -33,11 +33,11 @@ angular
         } else if (invite_number == null) {
             $scope.error_response = "You must include an invitation number"
         } else {
-            Invitation.query({id: invite_number},
+            Invitation.query({id: invite_number.trim()},
                 function(result) {
                     $scope.invitation = result.data;
                     if ($scope.invitation != null) {
-                        if ($scope.invitation.invite_name == invite_name) {
+                        if ($scope.invitation.invite_name.trim() == invite_name) {
                             for (i = 0; i < $scope.invitation.invitees.length; i++) {
                                 Invitee.query({id: $scope.invitation.invitees[i]}, function(result) {
                                     $scope.invitees.push(result.data);

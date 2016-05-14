@@ -17,7 +17,7 @@ Author:
 
 angular
     .module('RsvpCtrl', ['ngRoute'])
-    .controller('RsvpController', function($scope, Invitation, Invitee, InvitationSearch) {
+    .controller('RsvpController', function($scope, Invitation, Invitee) {
 
     $scope.invitation = null;
     $scope.error_response = ""

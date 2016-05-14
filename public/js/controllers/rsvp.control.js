@@ -49,6 +49,8 @@ angular
                         } else {
                             $scope.error_response = "Invitation name and number are not part of the same RSVP."
                         };
+                    } else {
+                        $scope.error_response = "An invitation with that name was not found."
                     };
                 },
                 function() {

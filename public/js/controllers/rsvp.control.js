@@ -33,7 +33,7 @@ angular
         } else if (invite_number == null) {
             $scope.error_response = "You must include an invitation number"
         } else {
-            InvitationSearch.query({search: invite_name.trim()},
+            Invitation.query({search: invite_name.trim()},
                 function(result) {
                     $scope.invitation = result.data[0];
                     if ($scope.invitation != null) {

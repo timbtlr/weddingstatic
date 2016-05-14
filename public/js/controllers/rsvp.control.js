@@ -17,7 +17,7 @@ Author:
 
 angular
     .module('RsvpCtrl', ['ngRoute'])
-    .controller('RsvpController', function($scope, Invitation, Invitee) {
+    .controller('RsvpController', function($scope, Invitation, Invitee, InvitationSearch) {
 
     $scope.invitation = null;
     $scope.error_response = ""
@@ -33,11 +33,11 @@ angular
         } else if (invite_number == null) {
             $scope.error_response = "You must include an invitation number"
         } else {
-            Invitation.query({id: invite_number.trim()},
+            InvitationSearch.query({search: invite_name.trim()},
                 function(result) {
-                    $scope.invitation = result.data;
+                    $scope.invitation = result.data[0];
                     if ($scope.invitation != null) {
-                        if ($scope.invitation.invite_name.trim() == invite_name) {
+                        if ($scope.invitation.id == invite_number.trim()) {
                             for (i = 0; i < $scope.invitation.invitees.length; i++) {
                                 Invitee.query({id: $scope.invitation.invitees[i]}, function(result) {
                                     $scope.invitees.push(result.data);
@@ -47,7 +47,7 @@ angular
                             $scope.user_logged_in = true;
                             $scope.error_response = ""
                         } else {
-                            $scope.error_response = "Invitation name and number are not part of the same RSVP card."
+                            $scope.error_response = "Invitation name and number are not part of the same RSVP."
                         };
                     };
                 },

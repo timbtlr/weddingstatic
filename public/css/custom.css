@@ -256,3 +256,15 @@ h1 {
 .instructions {
     margin-top: 25px;
 }
+
+.invitation-list {
+    height: 25px;
+}
+
+.admin-item {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    border: 1px solid black;
+}

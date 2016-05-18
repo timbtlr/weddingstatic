@@ -63,6 +63,9 @@ angular
         Invitation.update({id: $scope.invitation.id}, $scope.invitation);
 
         for (i = 0; i < $scope.invitees.length; i++) {
+            if ($scope.invitees[i].attending == null) {
+                $scope.invitees[i].attending = false;
+            };
             Invitee.update({id: $scope.invitees[i].id}, $scope.invitees[i]);
         };
 

@@ -1,4 +1,59 @@
-<div class = "container">
-    <h1>Admin Page</h1>
-    <h2>Your face is on FIRE!</h2>
+
+<div class = "container" ng-controller = "AdminController">
+    <p class = "error-response">{{error_response}}</p>
+    <p class = "success-response">{{success_response}}</p>
+
+    <div ng-show="!adminSetup()">
+        <p class="instructions">Admin page has not been setup for this application.</p>
+    </div>
+    <div ng-show="adminSetup()">
+        <form novalidate class="rsvp-form" ng-show="!user_logged_in">
+            <p class="instructions">Enter the admin password</p>
+            <br/>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-3"><input type="text" ng-model="password" /></div>
+                    <div class="col-xs-3">
+                        <input type="submit" ng-click="login(password)" value="Submit" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-10">
+                    <div class="col-xs-4"></div>
+                </div>
+            </div>
+        </form>
+
+
+        <div ng-show="user_logged_in">
+            <table ng-table="tableParams" class="table table-condensed table-bordered table-hover" ng-style="{'width': '80%', 'margin': 'auto'}">
+                <tr ng-repeat="invitation in $data">
+                    <td title="'Name'" filter="{ invite_name: 'text'}" sortable="'invite_name'">
+                        {{invitation.invite_name}}
+                    </td>
+                    <td title="'Message'" filter="{ message: 'text'}" sortable="'message'">
+                        {{invitation.message}}
+                    </td>
+                    <td title="'Song Request'" filter="{ song_request: 'text'}" sortable="'song_request'">
+                        {{invitation.song_request}}
+                    </td>
+                </tr>
+            </table>
+
+            number of attendees: {{numberAttending}}
+
+            <table ng-table="inviteeTableParams" class="table table-condensed table-bordered table-hover" ng-style="{'width': '80%', 'margin': 'auto'}" show-filter="true">
+                <tr ng-repeat="invitee in $data">
+                    <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
+                        {{invitee.name}}
+                    </td>
+                    <td title="'Attending'" filter="{ attending: 'text'}" sortable="'attending'">
+                        {{invitee.attending}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </div>

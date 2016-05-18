@@ -17,24 +17,29 @@ angular
             templateUrl: 'templates/home.html'
         })
 
-        //  Query view
+        //  About view
         .when('/about/', {
             templateUrl: 'templates/about.html'
         })
 
-        //  photo view
+        //  Admin view
+        .when('/admin/', {
+            templateUrl: 'templates/admin.html'
+        })
+
+        //  Photo view
         .when('/photos', {
             templateUrl: 'templates/photos.html',
             controller: 'PhotoController'
         })
 
-        //  rsvp view
+        //  Rsvp view
         .when('/rsvp/', {
             templateUrl: 'templates/rsvp.html'
             //controller: 'RsvpController'
         })
 
-        //  registry view
+        //  Registry view
         .when('/registry', {
             templateUrl: 'templates/registry.html',
             controller: 'RegistryController'

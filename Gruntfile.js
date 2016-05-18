@@ -27,7 +27,8 @@ module.exports = function(grunt) {
                     ENV: {
                         name: 'prod',
                         weddingApiUrl: process.env.WEDDING_API_URL,
-                        weddingApiKey: process.env.WEDDING_API_KEY
+                        weddingApiKey: process.env.WEDDING_API_KEY,
+                        adminPassword: process.env.ADMIN_PASSWORD
                     }
                 }
             }

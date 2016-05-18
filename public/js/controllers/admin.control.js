@@ -23,7 +23,6 @@ angular
     $scope.numberAttending = 0;
 
     $scope.adminSetup = function() {
-        return true;
         return ENV.adminPassword != null;
     };
 
@@ -62,7 +61,6 @@ angular
         };
     };
 
-    $scope.login("TymErinBoobies");
 
     $scope.update_invitation = function() {
         Invitation.update({id: $scope.invitation.id}, $scope.invitation);

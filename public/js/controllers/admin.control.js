@@ -35,7 +35,7 @@ angular
 
             Invitation.query({},
                 function(result) {
-                    $scope.tableParams = new NgTableParams({}, { data: result.data});
+                    $scope.tableParams = new NgTableParams({count: 10}, { data: result.data});
                 },
                 function() {
                     $scope.error_response = "Could not query for invitations"
@@ -44,7 +44,15 @@ angular
 
             Invitee.query({},
                 function(result) {
-                    $scope.inviteeTableParams = new NgTableParams({}, { data: result.data});
+                    $scope.inviteeTableParams = new NgTableParams(
+                        {
+                            count: 10
+                        },
+                        {
+                            counts: [],
+                            data: result.data
+                        }
+                    );
 
                     for (i = 0; i < result.data.length; i++) {
                         if (result.data[i].attending == true) {

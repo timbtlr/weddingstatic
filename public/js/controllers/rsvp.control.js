@@ -25,6 +25,7 @@ angular
     $scope.user_logged_in = false;
     $scope.rsvp_submitted = false;
     $scope.invitees = [];
+    $scope.processing = false;
 
     $scope.login = function(invite_name, invite_number) {
         $scope.success_response = ""
@@ -33,6 +34,7 @@ angular
         } else if (invite_number == null) {
             $scope.error_response = "You must include an invitation number"
         } else {
+            $scope.processing = true;
             Invitation.query({search: invite_name.trim()},
                 function(result) {
                     $scope.invitation = result.data[0];
@@ -45,16 +47,20 @@ angular
                             };
 
                             $scope.user_logged_in = true;
-                            $scope.error_response = ""
+                            $scope.error_response = "";
+                            $scope.processing = false;
                         } else {
                             $scope.error_response = "Invitation name and number are not part of the same RSVP."
+                            $scope.processing = false;
                         };
                     } else {
                         $scope.error_response = "An invitation with that name was not found."
+                        $scope.processing = false;
                     };
                 },
                 function() {
                     $scope.error_response = "Invitation number " + invite_number + " could not be found."
+                    $scope.processing = false;
                 });
         };
     };

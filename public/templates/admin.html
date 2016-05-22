@@ -28,10 +28,13 @@
 
 
         <div ng-show="user_logged_in">
-            <table ng-table="tableParams" class="table table-condensed table-bordered table-hover" ng-style="{'width': '80%', 'margin': 'auto'}">
+            <table ng-table="tableParams" class="table table-condensed table-bordered table-hover" ng-style="{'width': '80%', 'margin': 'auto'}" show-filter="true">
                 <tr ng-repeat="invitation in $data">
                     <td title="'Name'" filter="{ invite_name: 'text'}" sortable="'invite_name'">
                         {{invitation.invite_name}}
+                    </td>
+                    <td title="'ID'" filter="{ id: 'number'}" sortable="'id'">
+                        {{invitation.id}}
                     </td>
                     <td title="'Message'" filter="{ message: 'text'}" sortable="'message'">
                         {{invitation.message}}

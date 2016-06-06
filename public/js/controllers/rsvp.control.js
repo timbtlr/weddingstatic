@@ -37,7 +37,13 @@ angular
             $scope.processing = true;
             Invitation.query({search: invite_name.trim()},
                 function(result) {
-                    $scope.invitation = result.data[0];
+                    $scope.invitation = null;
+                    results = result.data;
+                    for (i = 0; i < results.length; i++) {
+                        if (results[i].id == invite_number) {
+                            $scope.invitation = results[i];
+                        };
+                    };
                     if ($scope.invitation != null) {
                         if ($scope.invitation.id == invite_number.trim()) {
                             for (i = 0; i < $scope.invitation.invitees.length; i++) {

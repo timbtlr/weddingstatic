@@ -31,7 +31,9 @@
         </form>
 
         <form novalidate class="rsvp-form" ng-show="user_logged_in">
-            <p class="instructions">Check the <strong>Attending</strong> box for each guest planning to attend the wedding.  Click <strong>RSVP</strong> when you're done!</p>
+            <p style="margin:0; padding:0; font-size: 16px;">Check the <strong>Attending</strong> box for each guest planning to attend. Leave the <strong>Attending</strong> box unchecked for each guest that cannot attend.</p>
+            <p style="margin:0; padding:0; font-size: 16px;">Click <strong>RSVP</strong> button when you're done!</p>
+            <br/>
             <br/>
             <div class="row" ng-repeat="invitee in invitees">
                 <div class="col-xs-10">
